@@ -1,0 +1,6 @@
+<app-nav-bar (open)="openSideBar()"></app-nav-bar>
+<div *ngIf="isActive">
+<app-side-bar (desactive)="closeSideBar()"></app-side-bar>
+</div>
+<router-outlet></router-outlet>
+<div class="footer"></div>

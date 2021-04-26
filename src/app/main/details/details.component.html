@@ -1,0 +1,158 @@
+<div class="main-container" *ngIf="carDetail != undefined" (window:resize)="onResize($event)" #widgetParentDiv>
+
+  <div class="car-container">
+    <div class="image">
+      <img [src]="domain+carDetail.photo">
+    </div>
+    <div class="description">
+      <p class="sub-title">{{carDetail.name}}</p>
+      <p class="title">{{carDetail.title}}</p>
+      <div class="text">
+        <p class="">{{carDetail.description}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="carousel">
+
+    <div class="cards" *ngIf="this.divWidth > 768">
+      <div class="card-container first">
+        <div *ngIf="carDetail.model_features[carouselIndex - 1] != undefined">
+          <div class="img-container">
+            <img src="{{domain}}{{carDetail.model_features[carouselIndex - 1].photo}}">
+            <div class="first-arrow-container" *ngIf="carDetail.model_features[carouselIndex - 1] != undefined">
+              <button (click)="leftChange()">
+                <img src="../../../assets/img/right-arrow.svg">
+              </button>
+            </div>
+          </div>
+          <div class="description-container">
+            <h1>{{carDetail.model_features[carouselIndex].name}}</h1>
+            <p>{{carDetail.model_features[carouselIndex].description}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-container medium">
+        <div class="img-container">
+          <img src="{{domain}}{{carDetail.model_features[carouselIndex].photo}}">
+        </div>
+        <div class="description-container">
+          <h1>{{carDetail.model_features[carouselIndex].name}}</h1>
+          <p>{{carDetail.model_features[carouselIndex].description}}</p>
+        </div>
+      </div>
+
+      <div class="card-container medium">
+        <div class="img-container">
+          <img src="{{domain}}{{carDetail.model_features[carouselIndex + 1].photo}}">
+        </div>
+        <div class="description-container">
+          <h1>{{carDetail.model_features[carouselIndex + 1].name}}</h1>
+          <p>{{carDetail.model_features[carouselIndex + 1].description}}</p>
+        </div>
+      </div>
+
+      <div class="card-container medium">
+        <div class="img-container">
+          <img src="{{domain}}{{carDetail.model_features[carouselIndex + 2].photo}}">
+        </div>
+        <div class="description-container">
+          <h1>{{carDetail.model_features[carouselIndex + 2].name}}</h1>
+          <p>{{carDetail.model_features[carouselIndex + 2].description}}</p>
+        </div>
+      </div>
+
+      <div class="card-container medium">
+        <div class="img-container">
+          <img src="{{domain}}{{carDetail.model_features[carouselIndex + 3].photo}}">
+        </div>
+        <div class="description-container">
+          <h1>{{carDetail.model_features[carouselIndex + 3].name}}</h1>
+          <p>{{carDetail.model_features[carouselIndex + 3].description}}</p>
+        </div>
+      </div>
+
+      <div class="card-container last" *ngIf="carDetail.model_features[carouselIndex + 4]">
+        <div *ngIf="carDetail.model_features[carouselIndex + 4]">
+          <div class="img-container">
+            <img src="{{domain}}{{carDetail.model_features[carouselIndex + 4].photo}}">
+            <div class="arrow-container">
+              <button (click)="rightChange()">
+                <img src="../../../assets/img/right-arrow.svg">
+              </button>
+            </div>
+          </div>
+          <div class="description-container">
+            <h1>{{carDetail.model_features[carouselIndex + 4].name}}</h1>
+            <p>{{carDetail.model_features[carouselIndex + 4].description}}</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="phone-carousel" *ngIf="this.divWidth <= 768">
+    <div class="card-container">
+      <div *ngIf="carDetail.model_features[carouselIndex]">
+        <div class="img-container">
+          <img src="{{domain}}{{carDetail.model_features[carouselIndex].photo}}" (click)="leftChange()">
+        </div>
+        <div class="description-container">
+          <h1>{{carDetail.model_features[carouselIndex].name}}</h1>
+          <p>{{carDetail.model_features[carouselIndex].description}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-container" style="
+    margin-left: 21px;
+    margin-right: -290px;">
+      <div *ngIf="carDetail.model_features[carouselIndex + 1]">
+        <div class="img-container">
+            <img src="{{domain}}{{carDetail.model_features[carouselIndex].photo}}" (click)="rightChange()">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="engine" *ngIf="this.divWidth >= 768">
+
+    <div class="text-container">
+      <p class="title">{{carDetail.model_highlights[0].title}}</p>
+      <p>{{carDetail.model_highlights[0].content}}</p>
+    </div>
+
+    <div class="img-container">
+      <img [src]="domain+carDetail.model_highlights[0].image">
+    </div>
+
+  </div>
+
+  <div class="engine" *ngIf="this.divWidth < 768">
+
+    <div class="img-container">
+      <img [src]="domain+carDetail.model_highlights[0].image">
+    </div>
+
+    <div class="text-container">
+      <p class="title">{{carDetail.model_highlights[0].title}}</p>
+      <p>{{carDetail.model_highlights[0].content}}</p>
+    </div>
+
+  </div>
+
+  <div class="wheels">
+    <div class="img-container">
+      <img [src]="domain+carDetail.model_highlights[1].image">
+    </div>
+
+    <div class="text-container">
+      <p class="title">{{carDetail.model_highlights[1].title}}</p>
+      <p class="text">{{carDetail.model_highlights[1].content}}</p>
+    </div>
+
+  </div>

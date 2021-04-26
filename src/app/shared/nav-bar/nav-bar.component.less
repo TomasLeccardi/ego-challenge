@@ -1,0 +1,101 @@
+@p-color: #191919;
+@p-size: 14px;
+
+html,
+body {
+  font-family: "Muli";
+}
+
+.nav {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  margin: 0 0 85px;
+  background-color: white;
+  display: flex;
+
+  @media (max-width: 768px) {
+    margin: 0 2%;
+  }
+
+  svg.ego {
+    margin-left: 2.43%;
+    margin-top: 16px;
+    margin-bottom: 14px;
+    width: 2.77%;
+
+    @media (max-width: 768px) {
+      width: 10%;
+      margin-left: 0;
+    }
+  }
+
+
+
+  p {
+    font-family: "Montserrat";
+  }
+
+  p.models {
+    margin: 27px 0 25px 5.34%;
+    font-weight: 600;
+    font-size: @p-size;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  p.models.active {
+    padding: 0 2.18% 27px 2.18%;
+    padding-bottom: 27px;
+    border-bottom: 4px solid #d0021b;
+    color: #d0021b;
+    transition: 0.5s;
+  }
+
+  p.files {
+    margin: 27px 0 25px 4.02%;
+    font-weight: 600;
+    font-size: @p-size;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  p.files.active {
+    padding: 0 2.18% 27px 2.18%;
+    padding-bottom: 27px;
+    border-bottom: 4px solid #d0021b;
+    color: #d0021b;
+    transition: 0.5s;
+  }
+
+  .menu{
+    margin: 27px 25px 25px auto;
+    background-color: none;
+
+    @media (max-width: 768px) {
+      margin-left: auto;
+      margin-right: 38.5px;
+    }
+
+    button{
+      border: none;
+      display: flex;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    p{
+      font-size: @p-size;
+      margin-right: 12px;
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+}

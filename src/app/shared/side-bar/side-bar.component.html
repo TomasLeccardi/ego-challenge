@@ -1,0 +1,44 @@
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900|Ubuntu:400,500,700" rel="stylesheet">
+
+<div [class]="isActive ? 'side-nav active' : 'side-nav'">
+
+  <div class="nav-container">
+    <button (click)="desactiveSideBar()">
+      <p>Cerrar</p>
+      <img src="../../../assets/img/cross.svg">
+    </button>
+  </div>
+
+  <div class="side-nav-content">
+
+    <div class="main">
+      <a>Modelos</a><br />
+      <a>Servicios y Acessorios</a><br />
+      <a>Finanaciación</a><br />
+      <a>Reviews y Comunidad</a><br />
+    </div>
+
+    <div class="services">
+      <a>Toyota Mobility Service</a><br />
+      <a>Toyota Gazoo Racing</a><br />
+      <a>Toyota Híbridos</a>
+    </div>
+
+    <div class="concessionaire">
+      <a>Concesionarios</a><br />
+      <a>Test Drive</a><br />
+      <a>Contacto</a>
+    </div>
+
+    <div class="activity">
+      <a>Actividades</a><br />
+      <a>Servicios al Cliente</a><br />
+      <a>Ventas Especiales</a><br />
+      <a>Innovación</a><br />
+      <a>Prensa</a><br />
+      <a>Acerca de...</a>
+    </div>
+
+  </div>
+
+</div>

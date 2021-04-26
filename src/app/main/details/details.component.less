@@ -1,0 +1,380 @@
+@font: "Montserrat";
+@font-color: #373737;
+
+.main-container {
+  padding-top: 70px;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    display: block;
+    padding: auto;
+  }
+
+  p {
+    text-align: left;
+    color: @font-color;
+    font-family: @font;
+  }
+  .car-container {
+    padding: 3.82% 9.58% 0 10.41%;
+    height: 17.46%;
+    display: flex;
+
+    @media (max-width: 768px) {
+      display: block;
+      margin: 0 4%;
+      margin-bottom: 4.39%;
+      padding: 0;
+    }
+
+    .image {
+      width: 48.52%;
+      height: 100%;
+      align-self: center;
+      text-align: left;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .description {
+      width: 41.23%;
+      height: 100%;
+      margin-left: auto;
+      text-align: left;
+
+      p.sub-title {
+        margin-top: 3.43%;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.35;
+        color: @font-color;
+
+        @media (max-width: 768px) {
+          line-height: 1.35;
+        }
+      }
+
+      p.title {
+        margin-top: 2.5%;
+        font-size: 50px;
+        font-weight: 600;
+        line-height: 1.14;
+        letter-spacing: -1px;
+
+        @media (max-width: 768px) {
+          font-size: 35px;
+          line-height: 1.26;
+          letter-spacing: -0.7px;
+          color: #191919;
+        }
+      }
+
+      text {
+        margin-top: 11.56%;
+        margin-bottom: 2.18%;
+        width: 81.06%;
+        margin .p {
+          font-size: 16px;
+          line-height: 1.69;
+          letter-spacing: -0.1px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        margin: auto;
+        width: 100%;
+      }
+    }
+  }
+
+  //PHONE CAROUSEL
+  .phone-carousel {
+    margin: 88px auto 100px 15px;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+
+    h1, p{
+      font-family: 'Montserrat';
+      color: #373737;
+    }
+
+    h1{
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.35;
+      letter-spacing: -0.4px;
+      margin-top: 22px;
+    }
+
+    p{
+      margin-top:20px;
+      font-size: 16px;
+      line-height: 1.69;
+      letter-spacing: -0.1px;
+    }
+
+    .card-container {
+      width: 100%;
+
+      .img-container {
+        display: flex;
+        width: 110%;
+
+        img{
+          width: 93%;
+        }
+      }
+    }
+  }
+
+  .carousel {
+    overflow: hidden;
+
+    .cards {
+      height: 410px;
+      width: 100%;
+      display: -webkit-box;
+      margin-top: 3.36%;
+      align-items: center;
+      position: relative;
+      left: -120px;
+      margin-bottom: -20px;
+
+      .card-container {
+        width: 18.75%;
+        height: 265px;
+        margin-right: 1.38%;
+
+        h1,
+        p {
+          font-family: "Montserrat";
+          text-align: left;
+        }
+
+        h1 {
+          margin-top: 20px;
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 1.35;
+          letter-spacing: -0.4px;
+          color: #373737;
+        }
+
+        p {
+          margin-top: 18px;
+          font-size: 16px;
+          line-height: 1.69;
+          letter-spacing: -0.1px;
+          color: #373737;
+        }
+
+        .img-container {
+          width: 100%;
+          height: 146px;
+
+          .arrow-container {
+            button {
+              padding: 64px 18px 61px 15px;
+              background-color: rgba(255, 255, 255, 0.56);
+              z-index: 2;
+              position: relative;
+              top: -152px;
+              right: -70px;
+              height: 148px;
+              width: 45px;
+              border: none;
+              cursor: pointer;
+
+              img {
+                transform: rotate(-360deg);
+                width: 12px;
+                height: 21px;
+                position: relative;
+                top: 0;
+                left: 0;
+              }
+            }
+          }
+
+          .first-arrow-container {
+            button {
+              padding: 64px 18px 61px 15px;
+              background-color: rgba(255, 255, 255, 0.56);
+              z-index: 2;
+              position: relative;
+              top: -152px;
+              left: 116px;
+              height: 148px;
+              width: 45px;
+              border: none;
+              cursor: pointer;
+
+              img {
+                transform: rotate(-190deg);
+                width: 12px;
+                height: 21px;
+                position: relative;
+                top: 0;
+                left: 0;
+              }
+            }
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            margin: auto;
+          }
+        }
+      }
+
+      .card-container.last {
+        overflow: hidden;
+        overflow-x: hidden;
+        opacity: 0.3;
+      }
+
+      .card-container.first {
+        opacity: 0.3;
+      }
+
+      .button-container {
+        text-align: center;
+        button {
+          height: 8px;
+          width: 8px;
+          border-radius: 4px;
+          border: none;
+          background-color: #c5c5c5;
+          margin-right: 1.38%;
+        }
+
+        button.active {
+          width: 2.7%;
+          border-radius: 4px;
+          background-color: #4a4a4a;
+        }
+      }
+    }
+  }
+
+  //CAROUSEL
+
+  .engine {
+    margin: 3.27% 10.48% 0 17.08%;
+    height: 16.1%;
+    display: flex;
+
+    @media (max-width: 768px) {
+      display: block;
+      margin: 0 4%;
+      margin-top: 5%;
+      margin-bottom: 39px;
+    }
+
+    .img-container {
+      width: 53.59%;
+      height: 100%;
+      text-align: right;
+      align-self: center;
+
+      @media (max-width: 768px) {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 19px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .text-container {
+      width: 46.4%;
+      margin: auto;
+
+      @media (max-width: 768px) {
+        width: 100%;
+        margin-top: 20px;
+      }
+      p.title {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.35;
+        letter-spacing: -0.4px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.69;
+        letter-spacing: -0.1px;
+        margin-right: 7%;
+      }
+    }
+  }
+
+  .wheels {
+    margin: 3.02% 15.38% 5.38% 10.41%;
+    height: 16.1%;
+    display: flex;
+
+    @media (max-width: 768px) {
+      display: block;
+      margin: 0;
+      margin: 0 4%;
+      margin-top: 5%;
+      margin-bottom: 79px;
+    }
+
+    .img-container {
+      width: 52.63%;
+      height: 100%;
+      text-align: left;
+      align-self: center;
+
+      @media (max-width: 768px) {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .text-container {
+      width: 36.25%;
+      text-align: left;
+      margin: auto;
+
+      @media (max-width: 768px) {
+        width: 100%;
+        margin-top: 1%;
+      }
+
+      p.title {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.35;
+        letter-spacing: -0.4px;
+
+        @media (max-width: 768px) {
+          margin-bottom: 20px;
+        }
+      }
+
+      p.text {
+        font-size: 16px;
+        line-height: 1.69;
+        letter-spacing: -0.1px;
+      }
+    }
+  }
+}

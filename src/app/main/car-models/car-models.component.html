@@ -1,0 +1,78 @@
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900|Ubuntu:400,500,700" rel="stylesheet">
+<script src="./car-model.js"></script>
+<div class="container">
+  <div class="title-container">
+    <h1 class="title">Descubrí todos los modelos</h1>
+  </div>
+
+  <div class="filters">
+    <div class="filter-buttons">
+      <p class="filterBy">Filtrar por</p>
+      <button (click)="filterBy($event)" [class]="activeFilter == 'Todos' ? 'active' : ''" value="Todos">Todos</button>
+      <button (click)="filterBy($event)" [class]="activeFilter == 'Autos' ? 'active' : ''" value="Autos">Autos</button>
+      <button (click)="filterBy($event)" [class]="activeFilter == 'Pickups y Comerciales' ? 'active' : ''" value="Pickups y Comerciales">Pickups y Comerciales</button>
+      <button (click)="filterBy($event)" [class]="activeFilter == 'SUVs y Crossovers' ? 'active' : ''" value="SUVs y Crossovers">SUVs y Crossovers</button>
+    </div>
+
+    <div style="margin-right: auto" class="filter-combo">
+      <mat-form-field appearance="fill" floatLabel="always">
+
+        <mat-label>Filtrar por</mat-label>
+        <mat-select panelClass="panel-class-filters" (selectionChange)="filterBy($event, true)" style="position: absolute;">
+          <mat-option value="Todos" style="border-bottom: 1px solid #d8d8d8; border-top-right-radius: 0;  font-family: 'Montserrat'">
+            Todos
+          </mat-option>
+          <mat-option value="Autos" style="border-bottom: 1px solid #d8d8d8;  font-family: 'Montserrat'">
+            Autos
+          </mat-option>
+          <mat-option value="Pickups y Comerciales" style="border-bottom: 1px solid #d8d8d8; font-family: 'Montserrat'">
+            Pickups y Comerciales
+          </mat-option>
+          <mat-option value="SUVs y Crossovers" style="font-family: 'Montserrat'">
+            SUVs y Crossovers
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+
+    <div style="margin-left: auto">
+      <mat-form-field appearance="fill" floatLabel="always">
+
+        <mat-label>Ordenar por</mat-label>
+        <mat-select panelClass="panel-class" (selectionChange)="orderBy($event)" style="
+        position: absolute;
+        " panelClass="panel-class">
+        <mat-option value="nothing" style="border-bottom: 1px solid #d8d8d8; font-family: 'Montserrat'">
+          Nada
+        </mat-option>
+          <mat-option value="lowestPrice" style="border-bottom: 1px solid #d8d8d8;font-family: 'Montserrat'">
+            De <strong>menor</strong> a <strong>mayor</strong> precio
+          </mat-option>
+          <mat-option value="higherPrice" style="border-bottom: 1px solid #d8d8d8; font-family: 'Montserrat'">
+            De <strong>mayor</strong> a <strong>menor</strong> precio
+          </mat-option>
+          <mat-option value="newest" style="border-bottom: 1px solid #d8d8d8; font-family: 'Montserrat';">
+            Más <strong>nuevos</strong> primero
+          </mat-option>
+          <mat-option value="oldest" style="font-family: 'Montserrat'">
+            Más <strong>viejos</strong> primero
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="card-container">
+    <div class="card" *ngFor="let car of allCars">
+      <h1 class="card-title">{{car.name}}</h1>
+      <p>{{car.year}} | {{car.price}}</p>
+      <div class="card-img-container">
+        <img src="{{domain}}{{car.photo}}">
+      </div>
+      <div class="button-container">
+        <button (click)="navigate('details/' + car.id)">Ver Modelo</button>
+      </div>
+    </div>
+  </div>
+</div>
