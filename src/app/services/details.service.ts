@@ -9,7 +9,7 @@ export class DetailsService{
   baseUrl: string;
 
   constructor(private http: HttpClient) {
-    this.baseUrl = 'http://challenge.agenciaego.tech/models/';
+    this.baseUrl = 'https://challenge.agenciaego.tech/models/';
   }
 
    getAll(carId: string): Promise<CarDetail>{
