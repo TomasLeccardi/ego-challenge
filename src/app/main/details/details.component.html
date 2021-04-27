@@ -112,7 +112,7 @@
     margin-right: -290px;">
       <div *ngIf="carDetail.model_features[carouselIndex + 1]">
         <div class="img-container">
-            <img src="{{domain}}{{carDetail.model_features[carouselIndex].photo}}" (click)="rightChange()">
+            <img src="{{domain}}{{carDetail.model_features[carouselIndex + 1].photo}}" (click)="rightChange()">
         </div>
       </div>
     </div>
