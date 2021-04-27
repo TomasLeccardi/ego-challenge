@@ -23,7 +23,7 @@ export class DetailsComponent implements OnInit, AfterViewInit {
   }
   carouselIndex = 0;
   carDetail: CarDetail;
-  domain: string = 'http://challenge.agenciaego.tech';
+  domain: string = 'https://challenge.agenciaego.tech';
 
   constructor(
     private _activatedRoute: ActivatedRoute,

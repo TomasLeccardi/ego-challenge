@@ -16,7 +16,7 @@ export class CarModelsComponent implements OnInit {
   mediaQueryList: any;
   breakpointObserver: any;
   activeFilter: string = "Todos" ;
-  domain: string = "http://challenge.agenciaego.tech"
+  domain: string = "https://challenge.agenciaego.tech"
 
 
   constructor(private _carModelsService: CarModelsService, private router: Router) {}
